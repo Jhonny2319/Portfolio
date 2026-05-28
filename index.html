@@ -1,212 +1,312 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Portfólio - Jhonny de Freitas Nogueira</title>
-
-  <style>
-
-    *{
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    body{
-      background: #f4f4f4;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    header{
-      background: #0d1117;
-      color: white;
-      text-align: center;
-      padding: 50px 20px;
-    }
-
-    header h1{
-      font-size: 42px;
-      margin-bottom: 10px;
-    }
-
-    header p{
-      font-size: 18px;
-      color: #c9d1d9;
-    }
-
-    section{
-      max-width: 1000px;
-      margin: 30px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    h2{
-      margin-bottom: 20px;
-      color: #0d1117;
-      border-bottom: 2px solid #0d1117;
-      padding-bottom: 10px;
-    }
-
-    p{
-      margin-bottom: 15px;
-      font-size: 16px;
-    }
-
-    .card{
-      background: #f9f9f9;
-      padding: 20px;
-      border-radius: 10px;
-      border-left: 5px solid #0d1117;
-    }
-
-    .card h3{
-      margin-bottom: 15px;
-      color: #0d1117;
-    }
-
-    .card a{
-      display: inline-block;
-      margin-top: 15px;
-      text-decoration: none;
-      background: #0d1117;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
-      transition: 0.3s;
-    }
-
-    .card a:hover{
-      background: #1f6feb;
-    }
-
-    .contato a{
-      color: #1f6feb;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .contato a:hover{
-      text-decoration: underline;
-    }
-
-    footer{
-      text-align: center;
-      padding: 20px;
-      color: #777;
-      font-size: 14px;
-    }
-
-  </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfólio - Jhonny de Freitas Nogueira</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+html{
+  scroll-behavior:smooth;
+}
+body{
+  font-family:'Poppins', sans-serif;
+  background:#0d1117;
+  color:white;
+  line-height:1.6;
+}
+header{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:40px;
+  background:linear-gradient(135deg,#0d1117,#161b22);
+}
+.hero{
+  max-width:800px;
+}
+.foto{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  object-fit:cover;
+  border:5px solid #58a6ff;
+  margin-bottom:25px;
+  box-shadow:0 0 30px rgba(88,166,255,0.5);
+}
+.hero h1{
+  font-size:55px;
+  color:#58a6ff;
+  margin-bottom:20px;
+}
+.hero p{
+  font-size:22px;
+  color:#c9d1d9;
+  margin-bottom:30px;
+}
+.buttons{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+.buttons a{
+  text-decoration:none;
+  padding:14px 28px;
+  border-radius:10px;
+  font-weight:600;
+  transition:0.3s;
+}
+.github{
+  background:#238636;
+  color:white;
+}
+.github:hover{
+  transform:translateY(-5px);
+  background:#2ea043;
+}
+.whatsapp{
+  background:#1f6feb;
+  color:white;
+}
+.whatsapp:hover{
+  transform:translateY(-5px);
+  background:#388bfd;
+}
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:80px 20px;
+}
+.title{
+  font-size:38px;
+  margin-bottom:40px;
+  color:#58a6ff;
+  text-align:center;
+}
+.about{
+  background:#161b22;
+  padding:40px;
+  border-radius:15px;
+}
+.about p{
+  margin-bottom:20px;
+  color:#c9d1d9;
+}
+.skills{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:20px;
+}
+.skill{
+  background:#161b22;
+  padding:25px;
+  border-radius:15px;
+  text-align:center;
+  transition:0.3s;
+  border:1px solid #30363d;
+}
+.skill:hover{
+  transform:translateY(-8px);
+  border-color:#58a6ff;
+}
+.skill h3{
+  color:#58a6ff;
+}
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:25px;
+}
+.project-card{
+  background:#161b22;
+  padding:30px;
+  border-radius:15px;
+  transition:0.3s;
+  border:1px solid #30363d;
+}
+.project-card:hover{
+  transform:translateY(-10px);
+  border-color:#58a6ff;
+}
+.project-card h3{
+  color:#58a6ff;
+  margin-bottom:15px;
+}
+.project-card p{
+  color:#c9d1d9;
+  margin-bottom:20px;
+}
+.project-card a{
+  text-decoration:none;
+  background:#238636;
+  color:white;
+  padding:10px 20px;
+  border-radius:8px;
+  display:inline-block;
+  transition:0.3s;
+}
+.project-card a:hover{
+  background:#2ea043;
+}
+.contact{
+  background:#161b22;
+  padding:40px;
+  border-radius:15px;
+  text-align:center;
+}
+.contact p{
+  margin-bottom:15px;
+}
+.contact a{
+  color:#58a6ff;
+  text-decoration:none;
+}
+footer{
+  text-align:center;
+  padding:30px;
+  color:#8b949e;
+}
+@media(max-width:768px){
+.hero h1{
+  font-size:38px;
+}
+.hero p{
+  font-size:18px;
+}
+.title{
+  font-size:30px;
+}
+.foto{
+  width:140px;
+  height:140px;
+}
+}
+</style>
 </head>
-
 <body>
-
-  <header>
-
-    <h1>Jhonny de Freitas Nogueira</h1>
-
-    <p>
-      Desenvolvedor Web | Suporte em TI | Bacharel em Ciência da Computação
-    </p>
-
-  </header>
-
-  <section>
-
-    <h2>Sobre Mim</h2>
-
-    <p>
-      Formado em Bacharel em Ciência da Computação, com experiência em suporte técnico,
-      manutenção de computadores e desenvolvimento web.
-    </p>
-
-    <p>
-      Possuo conhecimentos sólidos em HTML, CSS, JavaScript, PHP e MySQL,
-      desenvolvendo sistemas modernos, funcionais e responsivos.
-    </p>
-
-    <p>
-      Tenho facilidade para resolver problemas, trabalhar em equipe e aprender
-      novas tecnologias rapidamente.
-    </p>
-
-    <p>
-      Atualmente estou cursando inglês na Wizard, buscando aprimorar minhas
-      habilidades profissionais e de comunicação.
-    </p>
-
-  </section>
-
-  <section>
-
-    <h2>Projetos</h2>
-
-    <div class="card">
-
-      <h3>Sistema de Extintores</h3>
-
-      <p>
-        Sistema desenvolvido para gerenciamento e controle de extintores,
-        utilizando PHP, MySQL, HTML, CSS e JavaScript.
-      </p>
-
-      <p>
-        O sistema possui cadastro de usuários, controle de acesso
-        e gerenciamento completo das informações.
-      </p>
-
-      <p>
-        Projeto finalizado com foco em organização, segurança
-        e praticidade no gerenciamento dos dados.
-      </p>
-
-      <a href="https://github.com/Jhonny2319/SISTEMA-EXTINTOR" target="_blank">
-        Ver Projeto
-      </a>
-
-    </div>
-
-  </section>
-
-  <section class="contato">
-
-    <h2>Contato</h2>
-
-    <p>
-      <strong>Telefone:</strong> (11) 96358-7469
-    </p>
-
-    <p>
-      <strong>Email:</strong> jhonnyfreitas@icloud.com
-    </p>
-
-    <p>
-      <strong>LinkedIn:</strong>
-      <a href="https://www.linkedin.com/in/jhonny-freitas-/" target="_blank">
-        linkedin.com/in/jhonny-freitas-
-      </a>
-    </p>
-
-    <p>
-      <strong>GitHub:</strong>
-      <a href="https://github.com/Jhonny2319" target="_blank">
-        github.com/Jhonny2319
-      </a>
-    </p>
-
-  </section>
-
-  <footer>
-    <p>© 2026 - Jhonny de Freitas Nogueira</p>
-  </footer>
-
+<header>
+<div class="hero">
+<img src="foto.jpg" alt="Jhonny" class="foto">
+<h1>Jhonny de Freitas Nogueira</h1>
+<p>
+Desenvolvedor Web • Suporte em TI • Bacharel em Ciência da Computação
+</p>
+<div class="buttons">
+<a class="github" href="https://github.com/Jhonny2319" target="_blank">
+GitHub
+</a>
+<a class="whatsapp" href="https://wa.me/5511963587469" target="_blank">
+WhatsApp
+</a>
+</div>
+</div>
+</header>
+<section>
+<h2 class="title">Sobre Mim</h2>
+<div class="about">
+<p>
+Formado em Ciência da Computação, com experiência em suporte técnico,
+manutenção de computadores e desenvolvimento web.
+</p>
+<p>
+Possuo conhecimentos em HTML, CSS, JavaScript, PHP e MySQL,
+desenvolvendo sistemas modernos, funcionais e responsivos.
+</p>
+<p>
+Tenho facilidade em resolver problemas, trabalhar em equipe
+e aprender novas tecnologias rapidamente.
+</p>
+<p>
+Atualmente estudando inglês na Wizard para aprimorar ainda mais
+minhas habilidades profissionais.
+</p>
+</div>
+</section>
+<section>
+<h2 class="title">Tecnologias</h2>
+<div class="skills">
+<div class="skill">
+<h3>HTML5</h3>
+</div>
+<div class="skill">
+<h3>CSS3</h3>
+</div>
+<div class="skill">
+<h3>JavaScript</h3>
+</div>
+<div class="skill">
+<h3>PHP</h3>
+</div>
+<div class="skill">
+<h3>MySQL</h3>
+</div>
+<div class="skill">
+<h3>GitHub</h3>
+</div>
+</div>
+</section>
+<section>
+<h2 class="title">Projetos</h2>
+<div class="projects">
+<div class="project-card">
+<h3>Sistema de Extintores</h3>
+<p>
+Sistema completo para gerenciamento e controle de extintores,
+desenvolvido utilizando PHP, MySQL, HTML, CSS e JavaScript.
+</p>
+<a href="https://github.com/Jhonny2319/SISTEMA-EXTINTOR" target="_blank">
+Ver Projeto
+</a>
+</div>
+<div class="project-card">
+<h3>Portfólio Profissional</h3>
+<p>
+Site de portfólio responsivo desenvolvido para apresentação
+profissional na área de tecnologia.
+</p>
+<a href="https://github.com/Jhonny2319" target="_blank">
+Ver Projeto
+</a>
+</div>
+</div>
+</section>
+<section>
+<h2 class="title">Contato</h2>
+<div class="contact">
+<p>
+📱 WhatsApp: (11) 96358-7469
+</p>
+<p>
+📧 Email: jhonnyfreitas@icloud.com
+</p>
+<p>
+💼 LinkedIn:
+<a href="https://www.linkedin.com/in/jhonny-freitas-/" target="_blank">
+linkedin.com/in/jhonny-freitas-
+</a>
+</p>
+<p>
+💻 GitHub:
+<a href="https://github.com/Jhonny2319" target="_blank">
+github.com/Jhonny2319
+</a>
+</p>
+</div>
+</section>
+<footer>
+<p>
+©️ 2026 - Jhonny de Freitas Nogueira
+</p>
+</footer>
 </body>
 </html>
